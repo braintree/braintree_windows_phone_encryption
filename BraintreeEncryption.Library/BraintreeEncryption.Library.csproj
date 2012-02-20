@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1961E21A-790B-4F37-AFA9-F93D1D538B0D}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BraintreeEncryption.Library</RootNamespace>
+    <AssemblyName>BraintreeEncryption.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aes.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1Encodable.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1EncodableVector.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1Exception.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1InputStream.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1Null.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1Object.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1OctetString.cs" />
+    <Compile Include="BouncyCastle\Asn1\ASN1OctetStringParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1OutputStream.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1ParsingException.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1Sequence.cs" />
+    <Compile Include="BouncyCastle\Asn1\ASN1SequenceParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1Set.cs" />
+    <Compile Include="BouncyCastle\Asn1\ASN1SetParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\ASN1StreamParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1TaggedObject.cs" />
+    <Compile Include="BouncyCastle\Asn1\ASN1TaggedObjectParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\Asn1Tags.cs" />
+    <Compile Include="BouncyCastle\Asn1\BerApplicationSpecific.cs" />
+    <Compile Include="BouncyCastle\Asn1\BerApplicationSpecificParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\BerOctetString.cs" />
+    <Compile Include="BouncyCastle\Asn1\BEROctetStringParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\BerOutputStream.cs" />
+    <Compile Include="BouncyCastle\Asn1\BerSequence.cs" />
+    <Compile Include="BouncyCastle\Asn1\BERSequenceParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\BerSet.cs" />
+    <Compile Include="BouncyCastle\Asn1\BERSetParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\BerTaggedObject.cs" />
+    <Compile Include="BouncyCastle\Asn1\BERTaggedObjectParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\ConstructedOctetStream.cs" />
+    <Compile Include="BouncyCastle\Asn1\DefiniteLengthInputStream.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerApplicationSpecific.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerBitString.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerBMPString.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerBoolean.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerEnumerated.cs" />
+    <Compile Include="BouncyCastle\Asn1\DERExternal.cs" />
+    <Compile Include="BouncyCastle\Asn1\DERExternalParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerGeneralizedTime.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerGeneralString.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerIA5String.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerInteger.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerNull.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerNumericString.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerObjectIdentifier.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerOctetString.cs" />
+    <Compile Include="BouncyCastle\Asn1\DEROctetStringParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerOutputStream.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerPrintableString.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerSequence.cs" />
+    <Compile Include="BouncyCastle\Asn1\DERSequenceParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerSet.cs" />
+    <Compile Include="BouncyCastle\Asn1\DERSetParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerStringBase.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerT61String.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerTaggedObject.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerUniversalString.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerUnknownTag.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerUTCTime.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerUTF8String.cs" />
+    <Compile Include="BouncyCastle\Asn1\DerVisibleString.cs" />
+    <Compile Include="BouncyCastle\Asn1\IAsn1ApplicationSpecificParser.cs" />
+    <Compile Include="BouncyCastle\Asn1\IAsn1Choice.cs" />
+    <Compile Include="BouncyCastle\Asn1\IAsn1Convertible.cs" />
+    <Compile Include="BouncyCastle\Asn1\IAsn1String.cs" />
+    <Compile Include="BouncyCastle\Asn1\IndefiniteLengthInputStream.cs" />
+    <Compile Include="BouncyCastle\Asn1\LazyASN1InputStream.cs" />
+    <Compile Include="BouncyCastle\Asn1\LazyDERSequence.cs" />
+    <Compile Include="BouncyCastle\Asn1\LazyDERSet.cs" />
+    <Compile Include="BouncyCastle\Asn1\LimitedInputStream.cs" />
+    <Compile Include="BouncyCastle\Asn1\OidTokenizer.cs" />
+    <Compile Include="BouncyCastle\Asn1\Pkcs\RSAPrivateKeyStructure.cs" />
+    <Compile Include="BouncyCastle\Asn1\Util\FilterStream.cs" />
+    <Compile Include="BouncyCastle\Asn1\X509\RSAPublicKeyStructure.cs" />
+    <Compile Include="BouncyCastle\Crypto\AsymmetricKeyParameter.cs" />
+    <Compile Include="BouncyCastle\Crypto\CryptoException.cs" />
+    <Compile Include="BouncyCastle\Crypto\DataLengthException.cs" />
+    <Compile Include="BouncyCastle\Crypto\Digests\GeneralDigest.cs" />
+    <Compile Include="BouncyCastle\Crypto\Digests\Sha1Digest.cs" />
+    <Compile Include="BouncyCastle\Crypto\Digests\Sha256Digest.cs" />
+    <Compile Include="BouncyCastle\Crypto\Encodings\Pkcs1Encoding.cs" />
+    <Compile Include="BouncyCastle\Crypto\Engines\RSACoreEngine.cs" />
+    <Compile Include="BouncyCastle\Crypto\Engines\RsaEngine.cs" />
+    <Compile Include="BouncyCastle\Crypto\IAsymmetricBlockCipher.cs" />
+    <Compile Include="BouncyCastle\Crypto\ICipherParameters.cs" />
+    <Compile Include="BouncyCastle\Crypto\IDigest.cs" />
+    <Compile Include="BouncyCastle\Crypto\InvalidCipherTextException.cs" />
+    <Compile Include="BouncyCastle\Crypto\Parameters\ParametersWithRandom.cs" />
+    <Compile Include="BouncyCastle\Crypto\Parameters\RsaKeyParameters.cs" />
+    <Compile Include="BouncyCastle\Crypto\Parameters\RsaPrivateCrtKeyParameters.cs" />
+    <Compile Include="BouncyCastle\Crypto\Prng\DigestRandomGenerator.cs" />
+    <Compile Include="BouncyCastle\Crypto\Prng\IRandomGenerator.cs" />
+    <Compile Include="BouncyCastle\Crypto\Prng\ReversedWindowGenerator.cs" />
+    <Compile Include="BouncyCastle\Crypto\Prng\ThreadedSeedGenerator.cs" />
+    <Compile Include="BouncyCastle\Crypto\Util\Pack.cs" />
+    <Compile Include="BouncyCastle\Math\BigInteger.cs" />
+    <Compile Include="BouncyCastle\Security\GeneralSecurityException.cs" />
+    <Compile Include="BouncyCastle\Security\InvalidKeyException.cs" />
+    <Compile Include="BouncyCastle\Security\KeyException.cs" />
+    <Compile Include="BouncyCastle\Security\SecureRandom.cs" />
+    <Compile Include="BouncyCastle\Util\Arrays.cs" />
+    <Compile Include="BouncyCastle\Util\Collections\CollectionUtilities.cs" />
+    <Compile Include="BouncyCastle\Util\Collections\ISet.cs" />
+    <Compile Include="BouncyCastle\Util\Collections\UnmodifiableDictionary.cs" />
+    <Compile Include="BouncyCastle\Util\Collections\UnmodifiableDictionaryProxy.cs" />
+    <Compile Include="BouncyCastle\Util\Collections\UnmodifiableList.cs" />
+    <Compile Include="BouncyCastle\Util\Collections\UnmodifiableListProxy.cs" />
+    <Compile Include="BouncyCastle\Util\Collections\UnmodifiableSet.cs" />
+    <Compile Include="BouncyCastle\Util\Collections\UnmodifiableSetProxy.cs" />
+    <Compile Include="BouncyCastle\Util\Encoders\Hex.cs" />
+    <Compile Include="BouncyCastle\Util\Encoders\HexEncoder.cs" />
+    <Compile Include="BouncyCastle\Util\Encoders\IEncoder.cs" />
+    <Compile Include="BouncyCastle\Util\Io\BaseInputStream.cs" />
+    <Compile Include="BouncyCastle\Util\Io\StreamOverflowException.cs" />
+    <Compile Include="BouncyCastle\Util\Io\Streams.cs" />
+    <Compile Include="BouncyCastle\Util\Platform.cs" />
+    <Compile Include="BouncyCastle\Util\Strings.cs" />
+    <Compile Include="Braintree.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rsa.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
